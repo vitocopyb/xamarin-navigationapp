@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NavigationApp.Page2"
+             Title="Page2">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button x:Name="btnNext" Text="Ir a la página siguiente" Clicked="BtnNext_Clicked" />
+            <Button x:Name="btnPrev" Text="Ir a la página anterior" Clicked="BtnPrev_Clicked" />
+            <Button
+                x:Name="btnModal"
+                Text="Abrir ventana modal" 
+                Clicked="btnModal_Clicked"
+                BackgroundColor="MediumSeaGreen"
+                TextColor="White"
+            />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
