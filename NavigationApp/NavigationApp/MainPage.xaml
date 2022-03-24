@@ -9,6 +9,12 @@
             HeightRequest="200"
             Clicked="Button_Clicked"
         />
+        <Label 
+            x:Name="lblPlatformMessage"
+            VerticalOptions="CenterAndExpand"
+            HorizontalOptions="CenterAndExpand"
+            HorizontalTextAlignment="Center"
+        />
     </StackLayout>
 
 </ContentPage>

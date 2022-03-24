@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NavigationApp.DependencyServices;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,21 @@ namespace NavigationApp
         public Page2()
         {
             InitializeComponent();
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            //your code here;
+            //DependencyService.Get<IDeviceOrientation>().LockOrientationPortrait();
+            DependencyService.Get<IDeviceOrientation>().LockOrientationLandscape();
+        }
+
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+            DependencyService.Get<IDeviceOrientation>().UnlockOrientation();
         }
 
         private void BtnNext_Clicked(object sender, EventArgs e)

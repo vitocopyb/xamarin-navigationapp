@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NavigationApp.DependencyServices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -13,6 +14,14 @@ namespace NavigationApp
         public MainPage()
         {
             InitializeComponent();
+            GetPlatformMessage();
+        }
+
+        private void GetPlatformMessage()
+        {
+            var service = DependencyService.Get<IPlatformMessage>();
+            string message = service.GetMessage();
+            lblPlatformMessage.Text = message;
         }
 
         private void Button_Clicked(object sender, EventArgs e)
